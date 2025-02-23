@@ -137,7 +137,7 @@ INSERT INTO Users(name, phone, email)
   ('John D. McGaha','936-393-7722','JohnDMcGaha@jourrapide.com');
 
 INSERT INTO Roles(label)
-  VALUES ('author'), ('advocate'), ('recommender'), ('recommendee');
+  VALUES ('author'), ('advocate');
 
 INSERT INTO TagCategories(label)
   VALUES
