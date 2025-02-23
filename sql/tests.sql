@@ -2,43 +2,17 @@
 select "";
 select "";
 select "";
-select "BOOK AUTHORS";
+select "RESOURCES";
 select "";
 .headers on
 .mode column
-select resources.title, users.name, signatures.role_id
+select resources.title, resources.category,
+        users.name as 'interested party',
+        roles.label as 'role'
  from resources
  inner join signatures on resources.id = signatures.resource_id,
-            users on users.id = signatures.user_id
- where resources.category = 'book';
-
-.headers off
-select "";
-select "";
-select "";
-select "WEBSITE PROMOTERS";
-select "";
-.headers on
-.mode column
-select resources.title, users.name, signatures.role_id
- from resources
- inner join signatures on resources.id = signatures.resource_id,
-            users on users.id = signatures.user_id
- where resources.category = 'website';
-
-.headers off
-select "";
-select "";
-select "";
-select "BUSINESS PROMOTERS";
-select "";
-.headers on
-.mode column
-select resources.title, users.name, signatures.role_id
- from resources
- inner join signatures on resources.id = signatures.resource_id,
-            users on users.id = signatures.user_id
- where resources.category = 'business';
+            users on users.id = signatures.user_id,
+            roles on signatures.role_id = roles.id;
 
 .headers off
 select "";
