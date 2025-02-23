@@ -12,6 +12,8 @@ CREATE TABLE Users (
   email     CHAR(50),
   phone     CHAR(12)
 );
+CREATE INDEX user_name_index
+  ON Users(name);
 
 CREATE TABLE Roles (
   id        INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -238,98 +240,122 @@ WHERE users.name = 'Patty McMillan' and
 /**
  * create the recommendations
  */
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-04-18 13:25:14')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%Christoph%' and
       advocates.name like '%Harvey%' and
       resources.title like 'Moral%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-03-17 10:05:12')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like 'Terrence%' and
       advocates.name like 'Katie%' and
       resources.title like '%Responsible Stew%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-01-25 08:13:14')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like 'Christopher Y%' and
       advocates.name like 'Hans Schm%' and
       resources.title like 'African %';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-06-08 17:08:54')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%Hochstetler%' and
       advocates.name like 'Brendan S%' and
       resources.title like 'Faith in%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-09-28 19:45:34')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%nald F%' and
       advocates.name like 'Katie%' and
       resources.title like '%Path to%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-08-08 07:45:34')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like 'Nancy %' and
       advocates.name like '%Robert Stev%' and
       resources.title like 'Indy%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-06-15 06:55:14')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like 'James M%' and
       advocates.name like '%Robert Stev%' and
       resources.title like '%dles and%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-07-08 14:18:26')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%Boyk%' and
       advocates.name like '%Robert Stev%' and
       resources.title like '%Holiest%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-05-13 19:18:03')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%nald F%' and
       advocates.name like 'Harvey%' and
       resources.title like '%dles and%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-05-13 02:25:08')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%eanette%' and
       advocates.name like '%erling St%' and
       resources.title like '%ased Trea%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-10-08 12:08:21')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%ason B%' and
       advocates.name like '%atty M%' and
       resources.title like '%oral Cla%';
 
-INSERT INTO Recommendations(advocate_id, disciple_id, resource_id, at)
+INSERT INTO Recommendations(disciple_id, advocate_id, resource_id, at)
 SELECT disciples.id, advocates.id,
      resources.id, datetime('2023-02-27 08:23:01')
-FROM users as disciples, users as advocates, resources
+FROM users as disciples indexed by user_name_index,
+     users as advocates indexed by user_name_index,
+     resources
 WHERE disciples.name like '%nald F%' and
       advocates.name like '%ven Rich%' and
       resources.title like '%fter the%';
