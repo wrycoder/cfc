@@ -1,3 +1,23 @@
+/**
+ * RESOURCE CLEARINGHOUSE
+ *
+ * A demonstration for the Center for Congregations
+ *
+ * developer: Michael Toulouse
+ * test platform: sqlite3
+ *
+ * This SQL script can be referenced as a command-line
+ * argument to the -init option of sqlite3:
+ *
+ *    $ sqlite3 -init ./resource_schema.sql
+ *
+ * Within the sqlite environment, the associated
+ * script 'tests.sql' can be invoked to view the
+ * results:
+ *
+ *    sqlite> .read ./tests.sql
+ *
+ */
 DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Roles;
 DROP TABLE IF EXISTS Signatures;

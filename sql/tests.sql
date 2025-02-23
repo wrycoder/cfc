@@ -13,7 +13,17 @@ select resources.title, resources.category,
  inner join signatures on resources.id = signatures.resource_id,
             users on users.id = signatures.user_id,
             roles on signatures.role_id = roles.id;
-
+.headers off
+select "";
+select "";
+select "";
+select "TAGS";
+.headers on
+.mode column
+select resources.title, tagcategories.label
+ from resources
+ inner join tags on (tags.resource_id = resources.id),
+      tagcategories on (tags.category_id = tagcategories.id);
 .headers off
 select "";
 select "";
