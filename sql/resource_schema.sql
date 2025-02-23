@@ -102,6 +102,13 @@ CREATE INDEX tag_resource_index
   ON Tags(resource_id);
 CREATE INDEX tag_category_index
   ON Tags(category_id);
+CREATE TRIGGER tags_resources_trigger
+AFTER DELETE on resources
+FOR EACH ROW
+BEGIN
+  DELETE from tags
+  WHERE resource_id = OLD.id;
+END;
 
 /**
  * authors and advocates
@@ -360,3 +367,35 @@ WHERE disciples.name like '%nald F%' and
       advocates.name like '%ven Rich%' and
       resources.title like '%fter the%';
 
+/**
+ * create some tags
+ */
+INSERT INTO Tags(resource_id, category_id)
+SELECT resources.id, tagcategories.id
+FROM resources, tagcategories
+WHERE resources.title like '%fter the War is%' and
+      tagcategories.label = 'pastoral counseling';
+
+INSERT INTO Tags(resource_id, category_id)
+SELECT resources.id, tagcategories.id
+FROM resources, tagcategories
+WHERE resources.title like '%oral Clar%' and
+      tagcategories.label = 'activism';
+
+INSERT INTO Tags(resource_id, category_id)
+SELECT resources.id, tagcategories.id
+FROM resources, tagcategories
+WHERE resources.title like '%ath to Resp%' and
+      tagcategories.label = 'fundraising';
+
+INSERT INTO Tags(resource_id, category_id)
+SELECT resources.id, tagcategories.id
+FROM resources, tagcategories
+WHERE resources.title like '%andles and Su%' and
+      tagcategories.label = 'activism';
+
+INSERT INTO Tags(resource_id, category_id)
+SELECT resources.id, tagcategories.id
+FROM resources, tagcategories
+WHERE resources.title like '%aith in Pra%' and
+      tagcategories.label = 'substance abuse';
