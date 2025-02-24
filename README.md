@@ -10,7 +10,7 @@ congregations in Indiana. Each resource is associated with an author or promoter
 by date, recipient, and recommender. Recipients and recommenders are known,
 respectively, as `disciples` and `advocates`.
 
-![entity relationship diagram](https://github.com/wrycoder/cfc/blob/main/erd.png "Entity Relationship Diagram")
+![entity relationship diagram](https://github.com/wrycoder/cfc/blob/main/erd.pdf "Entity Relationship Diagram")
 
 Although I tried to be as platform-agnostic as possible, I didn't have access to
 a SQL Server platform. The scripts would need **at least one** modification to
