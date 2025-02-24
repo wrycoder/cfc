@@ -10,6 +10,8 @@ congregations in Indiana. Each resource is associated with an author or promoter
 by date, recipient, and recommender. Recipients and recommenders are known,
 respectively, as `disciples` and `advocates`.
 
+![entity relationship diagram](erd.pdf "Entity Relationship Diagram")
+
 Although I tried to be as platform-agnostic as possible, I didn't have access to
 a SQL Server platform. The scripts would need **at least one** modification to
 run on that system. Change the following line in each `CREATE TABLE` statement:
