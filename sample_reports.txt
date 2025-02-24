@@ -1,0 +1,45 @@
+RESOURCES
+
+title                                     category  interested party    role    
+----------------------------------------  --------  ------------------  --------
+Where We Go from Here: Disaster Recovery  website   Bob Smith           advocate
+African Spiritual Adventures              book      Hans Schmidt        author  
+Partners in Activism                      website   Rhonda K. Brown     advocate
+Indy's Holiest of Holy Cards              business  Fr. Robert Stevens  advocate
+Faith-based Treatment Options             website   Sterling St. John   advocate
+Candles and Such                          business  Harvey Miller       advocate
+Faith in Practice                         book      Brendan Shapiro     author  
+The Path to Responsible Stewardship       book      Katie Roberts       author  
+After the War is Over                     website   Sven Richter        advocate
+Moral Clarity                             website   Patty McMillan      advocate
+  
+  
+  
+TAGS  
+  
+title                                label              
+-----------------------------------  -------------------
+After the War is Over                pastoral counseling
+Moral Clarity                        activism           
+The Path to Responsible Stewardship  fundraising        
+Candles and Such                     activism           
+Faith in Practice                    substance abuse    
+  
+  
+  
+RECOMMENDATION HISTORY REPORT  
+  
+title                                advocate            disciple                at                 
+-----------------------------------  ------------------  ----------------------  -------------------
+African Spiritual Adventures         Hans Schmidt        Christopher Y. Martin   2023-01-25 08:13:14
+After the War is Over                Sven Richter        Ronald F. Howard        2023-02-27 08:23:01
+The Path to Responsible Stewardship  Katie Roberts       Terrence L. Roberts     2023-03-17 10:05:12
+Moral Clarity                        Harvey Miller       Christopher Y. Martin   2023-04-18 13:25:14
+Faith-based Treatment Options        Sterling St. John   Jeanette J. Johnson     2023-05-13 02:25:08
+Candles and Such                     Harvey Miller       Ronald F. Howard        2023-05-13 19:18:03
+Faith in Practice                    Brendan Shapiro     Stephen D. Hochstetler  2023-06-08 17:08:54
+Candles and Such                     Fr. Robert Stevens  James M. Appling        2023-06-15 06:55:14
+Indy's Holiest of Holy Cards         Fr. Robert Stevens  Jim P. Boykin           2023-07-08 14:18:26
+Indy's Holiest of Holy Cards         Fr. Robert Stevens  Nancy A. Smith          2023-08-08 07:45:34
+The Path to Responsible Stewardship  Katie Roberts       Ronald F. Howard        2023-09-28 19:45:34
+Moral Clarity                        Patty McMillan      Jason B. Wood           2023-10-08 12:08:21
