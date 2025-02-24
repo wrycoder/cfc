@@ -10,6 +10,11 @@ congregations in Indiana. Each resource is associated with an author or promoter
 by date, recipient, and recommender. Recipients and recommenders are known,
 respectively, as `disciples` and `advocates`.
 
+In this design, an `advocate` usually has a dual role: it recommends a `resource` to
+multiple `disciples`, but it also may be either an author of, or advocate for,
+a specific `resource`. To support that capability, a user can be connected
+to a `resource` through a `signature`.
+
 ![entity relationship diagram](https://github.com/wrycoder/cfc/blob/main/erd.png "Entity Relationship Diagram")
 
 Although I tried to be as platform-agnostic as possible, I didn't have access to
